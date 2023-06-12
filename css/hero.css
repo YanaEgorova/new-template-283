@@ -1,0 +1,103 @@
+.hero {
+    text-align: center;
+    padding: 15rem 0;
+}
+.hero .title {
+    max-width: 65rem;
+    margin: 0 auto;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+.hero .text {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+.hero__img,
+.phrase__img,
+.hero-svg-bottom,
+.hero-svg-top,
+.phrase-svg-top,
+.phrase-svg-bottom {
+    display: none;
+}
+
+.phrase {
+    padding: 10rem 0;
+    text-align: center;
+}
+.phrase__title {
+    font-family: var(--main-title-font);
+    font-size: 3rem;
+    text-transform: lowercase;
+    margin-bottom: 2rem;
+}
+.phrase__title::first-letter {
+    text-transform: uppercase;
+}
+.phrase .text {
+    margin: 0 auto 3rem;
+    max-width: 60rem;
+}
+
+@media screen and (min-width: 1440px)  {
+    .hero {
+        padding: 0;
+        padding: 5rem 0 5rem 15rem;
+        background-color: var(--second-brand-color);
+        text-align: left;
+        position: relative;
+    }
+    .hero-svg-bottom,
+    .hero-svg-top,
+    .phrase-svg-top,
+    .phrase-svg-bottom {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .hero__block {
+        max-width: 65rem;
+    }
+    .hero .title,
+    .phrase .text,
+    .phrase__title {
+        color: var(--sub-text-color);
+    }
+    .hero .text {
+        color: var(--sub-text-color);
+        margin-left: 0;
+    }
+    .hero__img {
+        position: absolute;
+        width: 45rem;
+        height: 60rem;
+        display: block;
+        object-fit: cover;
+        top: 50%;
+        right: 10rem;
+        transform: translate(0, -50%) rotate(10deg);
+        border: .5rem solid var(--third-brand-color);
+    }
+    .phrase__img {
+        border: .5rem solid var(--second-brand-color);
+        position: absolute;
+        width: 45rem;
+        height: 60rem;
+        display: block;
+        object-fit: cover;
+        top: 50%;
+        left: 10rem;
+        transform: translate(0, -50%) rotate(-10deg);
+    }
+
+    .phrase {
+        padding: 5rem 15rem 5rem 0;
+        text-align: right;
+        position: relative;
+        background-color: var(--third-brand-color);
+    }
+    .phrase .text,
+    .phrase .btn {
+        margin-right: 0;
+    }
+}
